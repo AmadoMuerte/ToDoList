@@ -39,10 +39,11 @@ function updateLocal() {
     localStorage.setItem('task', JSON.stringify(taskArr)); 
 };
 
-function btnComplFunc(index, btnComplite, task) {
+function btnComplFunc(index, btnComplite, task, p) {
     btnComplite.addEventListener('click', () => {
         task.classList.toggle('checked');
         btnComplite.classList.toggle('acceptWell');
+        p.classList.toggle('complitedText');
         if (task.classList.contains('checked')) {
             taskArr[index].complited = true;
             updateLocal();
@@ -76,23 +77,25 @@ function createTask(description, index) {
 
     let btnComplite = document.createElement('span');
     btnComplite.classList.add('acceptTask');
-    
     let p = document.createElement('p');
+    
     p.textContent = description;
 
     let btnDelete = document.createElement('i');
     btnDelete.classList.add('deleteTask');
-    btnComplFunc(index, btnComplite, task);
+    btnComplFunc(index, btnComplite, task, p);
     btnDelFunc(index, btnDelete);
 
     if(taskArr[index].complited) {
         btnComplite.classList.add('acceptWell');
         task.classList.add('checked');
+        p.classList.add('complitedText');
         taskArr[index].complited = true;
         updateLocal();
     } else {
         btnComplite.classList.remove('acceptWell');
         task.classList.remove('checked');
+        p.classList.remove('complitedText');
     }
     task.append(btnComplite, p, btnDelete);
     todoList.prepend(task);
