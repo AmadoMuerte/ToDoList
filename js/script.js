@@ -23,10 +23,25 @@ btnAdd.addEventListener('click', () => {
         typeText.value = '';
         updateLocal();
         
-    } else {
-        typeText.placeholder = '';
     }
     taskCreate();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.code === 'Enter') {
+        todoList.innerHTML = '';
+        if(typeText.value.trim()!=0){
+            let task =  {
+                description: typeText.value,
+                complited: false
+            }
+            taskArr.push(task);
+            typeText.value = '';
+            updateLocal();
+            
+        }
+        taskCreate();
+    };
 });
 
 btnClear.addEventListener('click', () => {
