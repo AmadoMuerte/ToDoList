@@ -173,7 +173,11 @@ body {
     .form__input {
         width: 150px;
         padding: 5px;
-        font-size: 15px;
+        font-size: 20px;
+    }
+    .todoList__item {
+        padding: 5px;
+        margin-bottom: 8px;
     }
     .form__btnAdd {
         font-size: 10px;
