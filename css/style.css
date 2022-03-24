@@ -1,7 +1,7 @@
 *{padding:0;margin:0;border:0}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}:focus,:active{outline:none}a:focus,a:active{outline:none}nav,footer,header,aside{display:block}html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%}input,button,textarea{font-family:inherit}input::-ms-clear{display:none}button{cursor:pointer}button::-moz-focus-inner{padding:0;border:0}a,a:visited{text-decoration:none}a:hover{text-decoration:none}ul li{list-style:none}img{vertical-align:top}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:400}
 
 body {
-    background-color: rgb(241, 212, 212);
+    background-color: rgba(161, 62, 62, 0.205);
 }
 .container {
     max-width: 1200px;
@@ -9,15 +9,28 @@ body {
     padding: 0 15px;
 }
 .myTodo {
-    margin-top: 50px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
+}
+.header{
+    background-color: rgba(43, 57, 87, 0.822);
+}
+.title {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgb(32, 32, 32);
+    color:rgb(191, 151, 202);
+    padding: 10px;
+    text-transform: uppercase;
 }
 .myTodo__inner {
     width: 700px;
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(43, 57, 87, 0.822);
+    box-shadow: 3px 3px 3px rgb(109, 108, 108);
 }
 .form {
     padding: 0 20px;
@@ -26,6 +39,7 @@ body {
     margin-bottom: 20px;
 }
 .form__input {
+    font-family: 'Neucha', cursive;
     margin-right: 20px;
     padding: 10px;
     font-size: 25px;
@@ -39,8 +53,9 @@ body {
     user-select: none;                                                 
 }
 .form__btnAdd {
-    padding: 10px;
-    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    font-size: 15px;
     border-radius: 20px;
     background-color:rgb(191, 151, 202);
     color: white;
@@ -57,9 +72,11 @@ body {
 .todoList {
     padding: 0px 20px;
     overflow: auto;
-    min-height: 200px;
-    max-height: 500px;
+    min-height: 400px;
+    max-height: 400px;
     font-size: 25px;
+    font-family: 'Neucha', cursive;
+    
 }
 .todoList__item {
     display: flex;
@@ -93,6 +110,7 @@ body {
 .checked {
     background-color: rgba(52, 54, 52, 0.473);
     color: rgb(141, 141, 141);
+    transition: 0.1s;
 }
 .complitedText {
     text-decoration: line-through;
@@ -110,6 +128,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     padding: 5px;
+    transition: 0.1s;
 }
 .deleteTask:hover {
     box-shadow: 1px 2px 5px rgb(177, 172, 172);
@@ -120,11 +139,12 @@ body {
     justify-content: center;
 }
 .btnClear {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    font-size: 15px;
     width: 200px;
     border-radius: 20px;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 10px;
     background-color:rgb(191, 151, 202);
     color: white;
     transition: 0.1s;
@@ -156,15 +176,18 @@ body {
         font-size: 15px;
     }
     .form__btnAdd {
-        font-size: 15px;
+        font-size: 10px;
     }
     .btnClear {
-        font-size: 15px;
+        font-size: 10px;
     }
     .myTodo__inner {
         width: 400px;
     }
     .todoList__item {
+        font-size: 20px;
+    }
+    .title {
         font-size: 15px;
     }
 }
